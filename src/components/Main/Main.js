@@ -11,6 +11,8 @@ class Main extends Component {
                         <div>
                             <Link to="/counter">To the Counter</Link>
                             <Link to="/form">To the Increment form</Link>
+                            {/* player */}
+                            <Link to='/player'> Player </Link>
                         </div>
                     )
                     : (
