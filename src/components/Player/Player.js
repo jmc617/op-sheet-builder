@@ -9,7 +9,7 @@ class Player extends Component {
     render() {
       return (
         <div className="wrapper">
-            <div>
+            <div className='nav'>
                 <Link to="/counter">To the Counter</Link>
                 <Link to="/form">To the Increment form</Link>
                 {/* player */}
