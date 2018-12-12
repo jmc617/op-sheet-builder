@@ -35,7 +35,7 @@ class Opsheet extends Component {
       })
     }
 
-    console.log('Button clicked');
+    console.log('Current state='+ this.state.collapsed);
 
   };
     
