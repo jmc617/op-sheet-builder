@@ -24,16 +24,8 @@ class Opsheet extends Component {
     collapsed: true, 
   };
 
-  collapseSheet = () => {
-    if (this.state.collapsed === true){
-      this.setState({
-        collapsed: false,
-      })
-    } else {
-      this.setState({
-        collapsed: true,
-      })
-    }
+  toggleSheetCollapseExpand = () => {
+    this.setState({collapsed: !this.state.collapsed})
 
     console.log('Current state='+ this.state.collapsed);
 
@@ -43,7 +35,7 @@ class Opsheet extends Component {
       return (
         <div className="opsheet-wrapper">
           <h3>Op sheet</h3>
-          <button className='collapse-toggle' onClick={this.collapseSheet}>+/-</button>
+          <button className='collapse-toggle' onClick={this.toggleSheetCollapseExpand}>+/-</button>
           
           <ListType />
           <List /> 
@@ -53,3 +45,5 @@ class Opsheet extends Component {
   }
 
 export default Opsheet;
+
+
