@@ -3,10 +3,11 @@ import React, { Component } from 'react';
 class Filters extends Component {
     render() {
       return (
-        <div>
+        <div className='filter-wrapper'>
             <h3>Filters</h3>
-            <input type="text"/>
-            <input type="button" value=""/>
+            <input type="checkbox" name="" id=""/>
+            <input type="checkbox" name="" id=""/>
+            <input type="checkbox" name="" id=""/>
         </div>
       );
     }

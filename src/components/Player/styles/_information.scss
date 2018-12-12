@@ -1,0 +1,20 @@
+.information-wrapper {
+    border: 2px dotted blue;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    text-align: center;
+}
+.filter-wrapper {
+    border: 2px dotted yellow;
+    grid-column: 2 / 3;
+}
+.proximity-search-wrapper {
+    border: 2px dotted grey;
+    grid-column: 3 / 4;
+}
+.habitat-list-wrapper {
+    grid-column: 1 / 4;
+}
+.proximity-input {
+    width: 50%;
+}

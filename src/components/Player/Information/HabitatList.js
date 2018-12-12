@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 class HabitatList extends Component {
     render() {
       return (
-        <div>
-            Habitat List
+        <div className='habitat-list-wrapper'>
+            <h2>Habitat List</h2>
         </div>
       );
     }

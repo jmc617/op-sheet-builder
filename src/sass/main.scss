@@ -1,4 +1,4 @@
-/* Main SCSS Parials */
+/* Main SCSS Partials */
 @import './abstracts/functions';
 @import './abstracts/mixins';
 @import './abstracts/variables';
@@ -8,5 +8,8 @@
 @import './base/typography';
 @import './base/utilities';
 
-// player view styling
-@import './player/wrapper'
+// src/components/player/styles view styling
+@import './src/components/player/styles/wrapper';
+@import './src/components/player/styles/search';
+@import './src/components/player/styles/opsheet';
+@import './src/components/player/styles/information';
