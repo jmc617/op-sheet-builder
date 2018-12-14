@@ -59,7 +59,7 @@ class Opsheet extends Component {
           <button className='collapse-toggle' onClick={this.toggleSheetCollapseExpand}>+/-</button>
           
           <ListType />
-          <List listClassName = {this.listClassName}/> 
+          <List listClassName={this.state.listClassName}/> 
 
         </div>
       );
