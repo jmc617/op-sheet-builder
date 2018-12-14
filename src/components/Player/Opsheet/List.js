@@ -5,7 +5,7 @@ function List(props) {
 
     <h3>Op List</h3>
     <ul>
-      <li>{props.listClassName}</li>
+      <li>One</li>
       <li>Two</li>
       <li>Three</li>
       <li>Four</li>
