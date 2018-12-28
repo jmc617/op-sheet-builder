@@ -1,17 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-function List(props) {
-  return <div className={props.listClassName}  >
+class List extends Component {
+  render() {
+    const { listClassName } = this.props
 
-    <h3>Op List</h3>
-    <ul>
-      <li>One</li>
-      <li>Two</li>
-      <li>Three</li>
-      <li>Four</li>
-      <li>Five</li>
-    </ul>
-  </div>
+    return (
+    < div className={listClassName}  >
+
+      <h3>Op List</h3>
+      <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+        <li>Four</li>
+        <li>Five</li>
+      </ul>
+    </div>
+    );
+  }
 }
 
 export default List;
