@@ -10,10 +10,7 @@ class Player extends Component {
       return (
         <div className="wrapper">
             <div className='nav'>
-                <Link to="/counter">To the Counter</Link>
-                <Link to="/form">To the Increment form</Link>
-                {/* player */}
-                <Link to='/player'> Player </Link>
+                <Link to='/'> Home </Link>
             </div>
             <Search />
             <Information />
