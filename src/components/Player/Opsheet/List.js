@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class List extends Component {
   render() {
-    const { listClassName } = this.props
+    const { listClassName } = this.props;
 
     return (
     < div className={listClassName}  >
