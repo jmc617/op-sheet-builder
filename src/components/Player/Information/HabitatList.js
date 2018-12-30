@@ -6,39 +6,42 @@ class HabitatList extends Component  {
 
   render() {
     const playerData = [{
-      //to search for habData
+      //from player.json to search for habData
       habitatIDs: [12,34,67,78]
     }]
-                
+
     const habData = [{
+      //from habitat.json
       name: 'Castle 1',
       points: 34,
     }, {
-      name: 'Castle 2',
+      name: 'Fort 2',
       points: 26,
     }, {
       name: 'Castle 3',
       points: 13,
     }, {
-      name: 'Castle 4',
+      name: 'Fort 4',
       points: 12,
     }]
 
     const columns = [{
       Header: 'Name',
-      accessor: 'name' // String-based value accessors!
+      accessor: 'name' 
     }, {
       Header: 'Points',
       accessor: 'points',
+    }, {
+      Header: '+'
     }]
 
     return (
       <div className = 'habitat-list-wrapper'>
         <ReactTable
           data={habData}
+          noDataText="Player not found!"
           columns={columns}
           minRows= {1}
-          filterable= {false}
           pageSizeOptions= {[5, 10, 20]}
           defaultPageSize= {10}
         />
