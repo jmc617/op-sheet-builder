@@ -8,30 +8,11 @@ class Opsheet extends Component {
     listClassName: 'list-wrapper-collapsed',
   };
 
-  checkIfCollapsed = () => {
-    if (this.state.collapsed === true) {
-      return true
-    } else {
-      return false
-    }
-  }
-
-  listClassNameChange = () => {
-    if (this.checkIfCollapsed() === true) {
-      this.setState({listClassName: 'list-wrapper'})
-    } else {
-      this.setState({listClassName: 'list-wrapper-collapsed'})
-    }
-}
+  listClassNameChange = () => { return (this.state.collapsed ? this.setState({listClassName: 'list-wrapper'}) : this.setState({listClassName: 'list-wrapper-collapsed'})) };
 
   toggleSheetCollapseExpand = () => {
     this.setState({collapsed: !this.state.collapsed})
     this.listClassNameChange();
-
-    console.log('Current state='+ this.state.collapsed);
-    console.log(this.state.listClassName);
-
-
   };
    
     render(){
