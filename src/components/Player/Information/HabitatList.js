@@ -5,7 +5,12 @@ import 'react-table/react-table.css';
 class HabitatList extends Component  {
 
   render() {
-    const data = [{
+    const playerData = [{
+      //to search for habData
+      habitatIDs: [12,34,67,78]
+    }]
+                
+    const habData = [{
       name: 'Castle 1',
       points: 34,
     }, {
@@ -30,7 +35,7 @@ class HabitatList extends Component  {
     return (
       <div className = 'habitat-list-wrapper'>
         <ReactTable
-          data={data}
+          data={habData}
           columns={columns}
           minRows= {1}
           filterable= {false}

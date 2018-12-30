@@ -2,6 +2,17 @@ import React, { Component } from 'react';
 
 class Text extends Component {
     render() {
+      const data = [{
+        //from players.json
+        nick: 'Silma',
+        points: 300,
+        rank: 4000,
+        onVacation: false,
+        underAttackProtection: false,
+        //to search for Alliance name + create link
+        allianceID: 300,
+      }]
+
       return (
         <div className='text-wrapper'>
             <h3>Player Name</h3>
