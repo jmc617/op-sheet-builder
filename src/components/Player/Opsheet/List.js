@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 class List extends Component {
   render() {
     const { listClassName } = this.props;
+    const { opSheetItems } = this.props;
+
+    console.log(opSheetItems)
 
     return (
     < div className={listClassName}  >

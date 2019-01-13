@@ -13,7 +13,7 @@ class Information extends Component {
           <Text />
           <Filters />
           <ProximitySearch />
-          <HabitatList />
+          <HabitatList  />
 
         </div>
       );

@@ -14,10 +14,16 @@ class Opsheet extends Component {
     this.setState({collapsed: !this.state.collapsed})
     this.listClassNameChange();
   };
+
+  
    
     render(){
       
       const { listClassName } = this.state;
+      const { opSheetItems} = this.props;
+      
+
+      console.log(opSheetItems)
 
       return (
         <div className="opsheet-wrapper">
@@ -25,7 +31,10 @@ class Opsheet extends Component {
           <button className='collapse-toggle' onClick={this.toggleSheetCollapseExpand}>+/-</button>
           
           <ListType />
-          <List listClassName={listClassName}/> 
+          <List 
+            listClassName={listClassName}
+            opSheetItems={opSheetItems}
+          /> 
 
         </div>
       );

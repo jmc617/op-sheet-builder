@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import ReactTable from 'react-table';
 import 'react-table/react-table.css';
+import AddToOpsheetButton from './AddToOpsheetButton';
 
 class HabitatList extends Component  {
 
   render() {
+
+
     const playerData = [{
       //from player.json to search for habData
       habitatIDs: [12,34,67,78]
@@ -32,7 +35,10 @@ class HabitatList extends Component  {
       Header: 'Points',
       accessor: 'points',
     }, {
-      Header: '+'
+      Header: 'add to oplist',
+      accessor: 'name',
+      Cell: < AddToOpsheetButton />,
+      
     }]
 
     return (
