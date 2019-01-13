@@ -2,17 +2,25 @@ import React, { Component } from 'react';
 import List from './List';
 import ListType from './ListType';
 
+const EXPANDED_LIST_CLASSNAME = 'list-wrapper';
+const COLLAPSED_LIST_CLASSNAME = 'list-wrapper-collapsed';
+
 class Opsheet extends Component {
+
   state = { 
     collapsed: true, 
-    listClassName: 'list-wrapper-collapsed',
+    listClassName: COLLAPSED_LIST_CLASSNAME,
   };
 
-  listClassNameChange = () => { return (this.state.collapsed ? this.setState({listClassName: 'list-wrapper'}) : this.setState({listClassName: 'list-wrapper-collapsed'})) };
+  changeListClassName = () => {
+    const { collapsed } = this.state;
+    const listClassName = (collapsed) ? EXPANDED_LIST_CLASSNAME : COLLAPSED_LIST_CLASSNAME;
+    this.setState({listClassName});
+  };
 
   toggleSheetCollapseExpand = () => {
     this.setState({collapsed: !this.state.collapsed})
-    this.listClassNameChange();
+    this.changeListClassName();
   };
 
   
