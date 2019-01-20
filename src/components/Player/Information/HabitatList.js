@@ -37,7 +37,7 @@ class HabitatList extends Component  {
     }, {
       Header: 'add to oplist',
       accessor: 'name',
-      Cell: < AddToOpsheetButton />,
+      Cell: <AddToOpsheetButton/>,
       
     }]
 

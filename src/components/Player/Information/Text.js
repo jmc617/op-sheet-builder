@@ -9,6 +9,7 @@ class Text extends Component {
       const vacationStatusText = () => { return (onVacation ? "Yes" : "No")};
       const protectionStatusText = () => { return (underAttackProtection ? "Yes" : "No")};
       
+      // This is Dan's comment.
 
       return (
         

@@ -10,10 +10,10 @@ class Information extends Component {
       return (
         <div className="information-wrapper">
 
-          <Text />
-          <Filters />
-          <ProximitySearch />
-          <HabitatList  />
+          <Text/>
+          <Filters/>
+          <ProximitySearch/>
+          <HabitatList/>
 
         </div>
       );
