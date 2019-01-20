@@ -6,18 +6,37 @@ import Search from './Search/Search';
 
 
 class Player extends Component {
-    render() {
-      return (
-        <div className="wrapper">
-            <div className='nav'>
-                <Link to='/'> Home </Link>
-            </div>
-            <Search />
-            <Information />
-            <Opsheet />
-        </div>
-      );
+  state = { 
+    opSheetItems: [], 
+  };
+
+  addItemToOpsheet = (name) => {
+    return () => {
+      this.setState(state => {
+        const opSheetItems = state.opSheetItems.concat(name)
+        console.log(opSheetItems);
+        return opSheetItems
+      });
     }
   }
- 
+
+  render() {
+
+    const { opSheetItems } = this.state;
+
+    
+    return (
+      <div className="wrapper">
+          <div className='nav'>
+              <Link to='/'> Home </Link>
+              <div onClick={this.addItemToOpsheet('test')}>add</div>
+          </div>
+          <Search />
+          <Information />
+          <Opsheet opSheetItems={opSheetItems}/>
+      </div>
+    );
+  }
+}
+
 export default Player;
