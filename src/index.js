@@ -28,9 +28,12 @@ const client = new ApolloClient({
 });
 
 ReactDOM.render(
-    <ApolloProvider client={client}>
-        <App />
-    </ApolloProvider>
+    <Provider store={store}>
+        {/* remove appollo provider? */}
+        <ApolloProvider client={client}>
+            <App />
+        </ApolloProvider>
+    </Provider>
     , document.getElementById('root')
 );
 
