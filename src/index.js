@@ -8,7 +8,7 @@ import { withClientState } from 'apollo-link-state';
 
 // redux imports
 import { Provider } from 'react-redux';
-import { store } from './store/index.js';
+import { store } from './redux/store/index.js';
 
 import defaultState from './apollo/defaultState';
 import resolvers from './apollo/resolvers';
