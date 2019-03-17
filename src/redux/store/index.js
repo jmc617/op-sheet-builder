@@ -1,10 +1,4 @@
-import React from 'react';
-import  { createStore, combineReducers } from 'redux';
-import reducers from '../reducers/reducers.js';
+import  { createStore } from 'redux';
+import opsheetApp from '../reducers/index'
 
-export const store = createStore(
-    combineReducers({
-        state: reducers
-    }),
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
+export const store = createStore(opsheetApp)
