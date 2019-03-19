@@ -6,13 +6,14 @@ import Text from './Text';
 
 class Information extends Component {
     render() {
+
       return (
         <div className="information-wrapper">
 
-          <Text />
-          <Filters />
-          <ProximitySearch />
-          <HabitatList />
+          <Text/>
+          <Filters/>
+          <ProximitySearch/>
+          <HabitatList/>
 
         </div>
       );

@@ -6,21 +6,20 @@ import Search from './Search/Search';
 
 
 class Player extends Component {
-    render() {
-      return (
-        <div className="wrapper">
-            <div className='nav'>
-                <Link to="/counter">To the Counter</Link>
-                <Link to="/form">To the Increment form</Link>
-                {/* player */}
-                <Link to='/player'> Player </Link>
-            </div>
-            <Search />
-            <Information />
-            <Opsheet />
-        </div>
-      );
-    }
+
+  render() {
+
+    return (
+      <div className="wrapper">
+          <div className='nav'>
+              <Link to='/'> Home </Link>
+          </div>
+          <Search />
+          <Information />
+          <Opsheet opSheetItems={opSheetItems}/>
+      </div>
+    );
   }
- 
+}
+
 export default Player;

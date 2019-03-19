@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Search from '../Player/Search/Search';
 
 class Main extends Component {
     render() {
@@ -9,10 +10,8 @@ class Main extends Component {
                 {
                     !DefaultComponent ? (
                         <div>
-                            <Link to="/counter">To the Counter</Link>
-                            <Link to="/form">To the Increment form</Link>
-                            {/* player */}
                             <Link to='/player'> Player </Link>
+                            <Search />
                         </div>
                     )
                     : (

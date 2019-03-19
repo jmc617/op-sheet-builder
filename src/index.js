@@ -6,6 +6,9 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 import { ApolloLink } from 'apollo-link';
 import { withClientState } from 'apollo-link-state';
 
+// redux imports
+import { Provider } from 'react-redux';
+import { store } from './redux/store/index.js';
 
 import defaultState from './apollo/defaultState';
 import resolvers from './apollo/resolvers';
@@ -28,10 +31,15 @@ const client = new ApolloClient({
 });
 
 ReactDOM.render(
-    <ApolloProvider client={client}>
-        <App />
-    </ApolloProvider>
+    <Provider store={store}>
+        {/* remove appollo provider? */}
+        <ApolloProvider client={client}>
+            <App />
+        </ApolloProvider>
+    </Provider>
     , document.getElementById('root')
 );
+
+
 
 
